@@ -254,47 +254,47 @@ export const booksData = [
     description: 'นวนิยายลึกลับระทึกขวัญเกี่ยวกับรหัสลับในงานศิลปะ'
   }
 ];
-
+ 
 // Function to get all books
 export const getAllBooks = () => {
   return booksData;
 };
-
+ 
 // Function to get a single book by ID
 export const getBookById = (id) => {
   return booksData.find(book => book.id === parseInt(id));
 };
-
+ 
 // Function to get books by category
 export const getBooksByCategory = (category) => {
   if (!category || category === 'all') return booksData;
   return booksData.filter(book => book.category === category);
 };
-
+ 
 // Function to search books
 export const searchBooks = (query) => {
   const lowercaseQuery = query.toLowerCase();
-  return booksData.filter(book => 
+  return booksData.filter(book =>
     book.title.toLowerCase().includes(lowercaseQuery) ||
     book.author.toLowerCase().includes(lowercaseQuery) ||
     book.category.toLowerCase().includes(lowercaseQuery)
   );
 };
-
+ 
 // Function to get featured books
 export const getFeaturedBooks = (limit = 3) => {
   return booksData
     .filter(book => book.rating >= 4.5)
     .slice(0, limit);
 };
-
+ 
 // Function to get new books
 export const getNewBooks = (limit = 4) => {
   return booksData
     .filter(book => book.isNew)
     .slice(0, limit);
 };
-
+ 
 // Function to get discounted books
 export const getDiscountedBooks = (limit = 4) => {
   return booksData
@@ -302,5 +302,5 @@ export const getDiscountedBooks = (limit = 4) => {
     .sort((a, b) => (b.discount || 0) - (a.discount || 0))
     .slice(0, limit);
 };
-
+ 
 export default booksData;

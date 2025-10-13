@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LocationMarkerIcon, PhoneIcon, MailIcon } from '@heroicons/react/outline';
-
+ 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -32,7 +32,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
+ 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">เมนูลัด</h4>
@@ -59,7 +59,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
+ 
           {/* Customer Service */}
           <div>
             <h4 className="text-lg font-semibold mb-4">บริการลูกค้า</h4>
@@ -86,7 +86,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
+ 
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">ติดต่อเรา</h4>
@@ -110,7 +110,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
+ 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -132,5 +132,5 @@ const Footer = () => {
     </footer>
   );
 };
-
+ 
 export default Footer;
